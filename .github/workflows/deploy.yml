@@ -21,8 +21,10 @@ jobs:
           cache: npm
 
       - name: Install dependencies
+        working-directory: ./my-website
         run: npm install --frozen-lockfile
       - name: Build website
+        working-directory: ./my-website
         run: npm build
 
       - name: Upload Build Artifact

@@ -21,6 +21,7 @@ jobs:
           cache: npm
 
       - name: Install dependencies
+        working-directory: ./my-website
         run: npm install --frozen-lockfile
       - name: Test build website
         run: npm build
